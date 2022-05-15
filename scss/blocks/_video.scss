@@ -1,0 +1,16 @@
+.wrapper-video {
+  width: 100vw;
+  max-width: 1500px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: $blue-light;
+  @include desktop {
+    height: 70vh;
+  }
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

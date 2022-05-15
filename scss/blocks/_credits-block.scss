@@ -1,0 +1,19 @@
+.credits {
+  padding: 7rem 0;
+  color: $white;
+  font-family: $apple;
+  max-width: 1600px;
+  margin: auto;
+  background-color: $blue-light;
+}
+
+.credits-block {
+  text-align: center;
+  font-size: 1.4rem;
+  width: 80%;
+  margin: 0 auto;
+
+  &__pokemon-language {
+    margin-bottom: 2rem;
+  }
+}

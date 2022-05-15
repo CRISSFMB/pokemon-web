@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 65.2%;
+  min-width: 320px;
+}
+
+// * {
+//   border: 1px solid rgb(26, 89, 99);
+// }
+
+body {
+  // background-color: $blue-light;
+  color: $white;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
