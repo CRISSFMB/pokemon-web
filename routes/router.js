@@ -27,18 +27,18 @@ const routes = {
 };
 openNav('#menu-toggle', '.nav', '.navbar__list__link');
 
-const router = async () => {
-  const header = null || document.getElementById('header');
-  const content = null || document.getElementById('content');
-  const footer = null || document.getElementById('footer');
+const router = () => {
+  const header = document.getElementById('header');
+  const content = document.getElementById('content');
+  const footer = document.getElementById('footer');
 
   let hash = getHash();
-  let route = await resolveRoutes(hash);
+  let route = resolveRoutes(hash);
   let render = routes[route] ? routes[route] : Error404;
 
-  header.innerHTML = await Header();
-  content.innerHTML = await render();
-  footer.innerHTML = await Footer();
+  header.innerHTML = Header();
+  content.innerHTML = render();
+  footer.innerHTML = Footer();
   hamburgerAnimation('#menu-toggle', 'open');
   darkTheme('.dark-theme-btn', 'dark-mode');
   languages('click', '.flags__img');
