@@ -1,5 +1,8 @@
 export const sliderfn = () => {
   const slider = null || document.querySelector('#slider');
+  if (!slider) {
+    return;
+  }
   let section = null || document.querySelectorAll('.slider__section');
   let lastSection = null || section[section.length - 1];
   slider.insertAdjacentElement('afterbegin', lastSection);

@@ -1241,4 +1241,73 @@ header {
   width: 30px;
 }
 
+.hero {
+  background-image: linear-gradient(rgba(20, 21, 18, 0.36), rgba(6, 6, 6, 0.189)), url("../../assets/images-news/background-callcenter.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  .hero {
+    padding: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero {
+    height: 70rem;
+  }
+}
+.hero__content {
+  width: 70%;
+  max-width: 40rem;
+}
+.hero__title {
+  text-align: center;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper__input {
+  max-width: 50rem;
+  min-width: 162px;
+  padding: 1rem;
+  border-radius: 10px;
+  display: block;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.input-wrapper__icon {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../assets/icons/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /*# sourceMappingURL=styles.css.map */

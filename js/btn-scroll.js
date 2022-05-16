@@ -3,7 +3,7 @@ export function buttonScroll(btn) {
     let $nodoButton = document.querySelector(btn);
     let scrollEnd = 865;
     let scrollWindow = window.pageYOffset;
-
+    if (!$nodoButton) return;
     if (scrollWindow > scrollEnd) {
       $nodoButton.classList.remove('hidden');
     } else {

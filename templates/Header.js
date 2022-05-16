@@ -3,13 +3,16 @@
 const Header = () => {
   const view = `
   <button class="dark-theme-btn">🌑</button>
-  <nav class="nav" data-dark>
-    <div class="nav__content container">
-      <img
-        class="icon-poke"
-        src="../assets/icons/poke-icon.png"
-        alt="icon-poke"
-      />
+      <nav class="nav" data-dark>
+      <div class="nav__content container">
+      <a href="/">
+        <img
+          class="icon-poke"
+          src="../assets/icons/poke-icon.png"
+          alt="icon-poke"
+        />
+      </a>
+   
 
       <div class="flags">
         <div class="flags__wrapper" data-languages="de">
@@ -28,17 +31,7 @@ const Header = () => {
           <a
             class="navbar__link"
             data-dark
-            href="./pages/list.html"
-            data-section="section-nav"
-            data-value="list"
-            >bestenliste</a
-          >
-        </li>
-        <li class="navbar__list">
-          <a
-            class="navbar__link"
-            data-dark
-            href="./pages/finde.html"
+            href="#/find/"
             data-section="section-nav"
             data-value="search"
             >finde pokemon</a

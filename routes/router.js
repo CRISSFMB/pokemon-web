@@ -9,6 +9,7 @@ import { sliderfn } from '../js/slider.js';
 import Character from '../pages/Character.js';
 import Error404 from '../pages/Error404.js';
 import Home from '../pages/Home.js';
+import { ScreenFindPoke } from '../pages/ScreenFindPoke.js';
 
 // templates
 import Header from '../templates/Header.js';
@@ -22,26 +23,27 @@ import resolveRoutes from '../utils/resolveRoutes.js';
 const routes = {
   '/': Home,
   '/:id': Character,
-  '/contact': 'contact',
+  '/find': ScreenFindPoke,
 };
+openNav('#menu-toggle', '.nav', '.navbar__list__link');
 
 const router = async () => {
   const header = null || document.getElementById('header');
   const content = null || document.getElementById('content');
   const footer = null || document.getElementById('footer');
 
-  header.innerHTML = await Header();
   let hash = getHash();
   let route = await resolveRoutes(hash);
   let render = routes[route] ? routes[route] : Error404;
+
+  header.innerHTML = await Header();
   content.innerHTML = await render();
   footer.innerHTML = await Footer();
-  darkTheme('.dark-theme-btn', 'dark-mode');
-  buttonScroll('.button-scroll');
-  openNav('#menu-toggle', '.nav', '.navbar__list__link');
   hamburgerAnimation('#menu-toggle', 'open');
+  darkTheme('.dark-theme-btn', 'dark-mode');
   languages('click', '.flags__img');
   sliderfn();
+  buttonScroll('.button-scroll');
 };
 
 export default router;
